@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Soccer Squad</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top__area content__center">
+            <div class="rules content__center">
+                <h1>Build your own soccer team</h1>
+                <h4>Rules</h4>
+                <p>Select eleven players from the list. You cannot spend more than 80 million euros in salaries. You can deselect a player you previously selected if you change your mind.</p>
+            </div>
+            <div class="messages">
+                <div class="message">
+                    <p>Players Selected</p>
+                    <span id="selected">0</span>
+                </div>
+                <div class="message">
+                    <p>Total Cost</p>
+                    <span id="cost">0</span>
+                </div>
+                <div class="message">
+                    <p>Players Left</p>
+                    <span id="left">0</span>
+                </div>
+                <div class="message">
+                    <p>Money Left</p>
+                    <span id="money">0</span>
+                </div>
+            </div>
+            <div id="money__error">
+                <p>You've exceeded the money you can spend. You can't add more players unless you go under 80 millions.</p>
+            </div>
+            <div id="players__error">
+                <p>You've exceeded the number of players you can select. Please select only eleven players.</p>
+            </div>
+        </div>
+
+        <div class="players__container">
+            <div class="player" style="background-image: url(players/Iker\ Casilas.webp);">
+                <div class="player__info">
+                    <h5>Iker Casilas</h5>
+                    <small>Goalkeeper</small>
+                    <option value="6500020" class="salary">
+                        6,500,020 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Oliver\ Khan.jpg);">
+                <div class="player__info">
+                    <h5>Oliver Khan</h5>
+                    <small>Goalkeeper</small>
+                    <option value="5790000" class="salary">
+                        5,790,000 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Gigi\ Buffon.jpg);">
+                <div class="player__info">
+                    <h5>Gianluigi Buffon</h5>
+                    <small>Goalkeeper</small>
+                    <option value="6140900" class="salary">
+                        6,140,900 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Paolo-Maldini-585x775.jpg);">
+                <div class="player__info">
+                    <h5>Paolo Maldini</h5>
+                    <small>Defender</small>
+                    <option value="9450450" class="salary">
+                        9,450,450 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Fabio\ Cannavaro.webp);">
+                <div class="player__info">
+                    <h5>Fabio Cannavaro </h5>
+                    <small>Defender</small>
+                    <option value="8050950" class="salary">
+                        8,050,950 €
+                    </option>
+                </div>
+            </div>
+            <div class="player"  style="background-image: url(players/Alessandro\ Nesta.webp);">
+                <div class="player__info">
+                    <h5>Alessandro Nesta </h5>
+                    <small>Defender</small>
+                    <option value="6000999" class="salary">
+                        6,000,999 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Javier\ Zanneti.jpg);">
+                <div class="player__info">
+                    <h5>Javier Zanetti</h5>
+                    <small>Defender</small>
+                    <option value="3200033" class="salary">
+                        3,200,033 €
+                    </option>
+                </div>
+            </div>
+            <div class="player"  style="background-image: url(players/Cafu.webp);">
+                <div class="player__info">
+                    <h5>Cafu </h5>
+                    <small>Defender</small>
+                    <option value="2700890" class="salary">
+                        2,700,890 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Roberto\ Carlos.jpg);">
+                <div class="player__info">
+                    <h5>Roberto Carlos</h5>
+                    <small>Defender</small>
+                    <option value="4560008" class="salary">
+                        4,560,008 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Lilliam\ Thuram.webp);">
+                <div class="player__info">
+                    <h5>Lilian Thuram</h5>
+                    <small>Defender</small>
+                    <option value="5008950" class="salary">
+                        5,008,950 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Carles\ Puyol.jpg);">
+                <div class="player__info">
+                    <h5>Carles Puyol </h5>
+                    <small>Defender</small>
+                    <option value="5808050" class="salary">
+                        5,808,050 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Zinedine\ Zidane.jpg);">
+                <div class="player__info">
+                    <h5>Zinedine Zidane</h5>
+                    <small>Midfielder</small>
+                    <option value="8999999" class="salary">
+                        8,999,999 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Luis\ Figo.webp);">
+                <div class="player__info">
+                    <h5>Luis Figo</h5>
+                    <small>Midfielder</small>
+                    <option value="4000833" class="salary">
+                        4,000,833 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Ronaldinho.jpg);">
+                <div class="player__info">
+                    <h5>Ronaldinho</h5>
+                    <small>Midfielder</small>
+                    <option value="7222200" class="salary">
+                        7,222,200 €
+                    </option>
+                </div>
+            </div>
+            <div class="player"  style="background-image: url(players/Hidetoshi\ Nakata.jpg);">
+                <div class="player__info">
+                    <h5>Hidetoshi Nakata</h5>
+                    <small>Midfielder</small>
+                    <option value="2347002" class="salary">
+                        2,347,002 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Clarence\ Seerdorf.jpg);">
+                <div class="player__info">
+                    <h5>Clarence Seedorf</h5>
+                    <small>Midfielder</small>
+                    <option value="4300001" class="salary">
+                        4,300,001 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Patrick\ Vierra.jpg);">
+                <div class="player__info">
+                    <h5>Patrick Vieira</h5>
+                    <small>Andrea Pirlo</small>
+                    <option value="7909000" class="salary">
+                        7,909,000 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Andrea-Pirlo.jpg);">
+                <div class="player__info">
+                    <h5>Andrea Pirlo</h5>
+                    <small>Midfielder</small>
+                    <option value="5509500" class="salary">
+                        5,509,500 €
+                    </option>
+                </div>
+            </div>
+            <div class="player"  style="background-image: url(players/Frank\ Lampard.webp);">
+                <div class="player__info">
+                    <h5>Frank Lampard</h5>
+                    <small>Midfielder</small>
+                    <option value="5666933" class="salary">
+                        5,666,933 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Pavel\ Nedved.jpeg);">
+                <div class="player__info">
+                    <h5>Pavel Nedvěd</h5>
+                    <small>Midfielder</small>
+                    <option value="6666066" class="salary">
+                        6,666,066 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Micheal\ Ballack.jpg);">
+                <div class="player__info">
+                    <h5>Michael Ballack </h5>
+                    <small>Midfielder</small>
+                    <option value="4007700" class="salary">
+                        4,007,700 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Edgar\ Davids.jpg);">
+                <div class="player__info">
+                    <h5>Edgar Davids </h5>
+                    <small>Midfielder</small>
+                    <option value="8667000" class="salary">
+                        8,667,000 €
+                    </option>
+                </div>
+            </div>
+            <div class="player"style="background-image: url(players/alisson-becker.jpeg);">
+                <div class="player__info">
+                    <h5>David Beckham</h5>
+                    <small>Midfielder</small>
+                    <option value="5005657" class="salary">
+                        5,005,657 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Steve\ Gerard.webp);">
+                <div class="player__info">
+                    <h5>Steven Gerrard</h5>
+                    <small>Midfielder</small>
+                    <option value="3000003" class="salary">
+                        3,000,003 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Alessandro\ Del\ Piero.jpg);">
+                <div class="player__info">
+                    <h5>Alessandro Del Piero</h5>
+                    <small>Forward</small>
+                    <option value="18500555" class="salary">
+                        18,500,555 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Ruud\ Van\ Nistelroy.jpg);">
+                <div class="player__info">
+                    <h5>Ruud van Nistelrooy</h5>
+                    <small>Forward</small>
+                    <option value="5000500" class="salary">
+                        5,000,500 €
+                    </option>
+                </div>
+            </div>
+            <div class="player"  style="background-image: url(players/Luiz\ Ronaldo.webp);">
+                <div class="player__info">
+                    <h5>Ronaldo</h5>
+                    <small>Forward</small>
+                    <option value="25900900" class="salary">
+                        25,900,900 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Thierry\ Henry.jpeg);">
+                <div class="player__info">
+                    <h5>Thierry Henry</h5>
+                    <small>Forward</small>
+                    <option value="21000999" class="salary">
+                        21,000,999 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Dennis\ Bergkamp.jpg);">
+                <div class="player__info">
+                    <h5>Dennis Bergkamp</h5>
+                    <small>Forward</small>
+                    <option value="4758334" class="salary">
+                        4,758,334 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Hernan\ Crespo.png);">
+                <div class="player__info">
+                    <h5>Hernán Crespo</h5>
+                    <small>Forward</small>
+                    <option value="9500001" class="salary">
+                        9,500,001 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Ryan\ Giggs.webp);">
+                <div class="player__info">
+                    <h5>Ryan Giggs</h5>
+                    <small>Forward</small>
+                    <option value="16707077" class="salary">
+                        16,707,077 €
+                    </option>
+                </div>
+            </div>
+            <div class="player" style="background-image: url(players/Gabriel\ Batistuta.jpg);">
+                <div class="player__info">
+                    <h5>Gabriel Batistuta</h5>
+                    <small>Forward</small>
+                    <option value="11111000" class="salary">
+                        11,111,000 €
+                    </option>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
